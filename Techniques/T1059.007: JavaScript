@@ -1,0 +1,39 @@
+# T1059.007 – JavaScript
+
+## Overview
+JavaScript خارج المتصفح (WScript) يُستخدم في الهجمات الحديثة مثل SocGholish وHTML smuggling.
+
+---
+
+## Why Attackers Use It
+- Fake browser updates
+- HTML smuggling
+- ZIP + JS loaders
+- تشغيل PowerShell
+
+---
+
+## Common Behaviors
+- WScript.exe يشغّل JS
+- JS → PowerShell
+- JS ينزّل payloads
+- HTML يبني EXE داخليًا
+
+---
+
+## Detection
+- Monitoring WScript.exe
+- AMSI
+- Network monitoring
+
+---
+
+## Related Threats
+- SocGholish
+- IcedID
+
+---
+
+## Summary
+JavaScript خارج المتصفح = قلب الهجمات الحديثة.
+
