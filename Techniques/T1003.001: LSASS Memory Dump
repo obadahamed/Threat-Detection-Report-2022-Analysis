@@ -1,0 +1,49 @@
+# T1003.001 – LSASS Memory Dump
+
+## Overview
+LSASS هو المكان الذي يخزن فيه Windows كلمات السر والـ hashes والتذاكر.  
+المهاجمون يقومون بتفريغ ذاكرته للحصول على بيانات تسجيل الدخول.
+
+---
+
+## Why Attackers Use It
+- استخراج كلمات السر مباشرة
+- استخراج NTLM hashes
+- استخراج Kerberos tickets
+- الحصول على صلاحيات أعلى
+
+---
+
+## Common Methods
+- rundll32.exe + comsvcs.dll MiniDump
+- procdump64.exe
+- Cobalt Strike dump module
+- Task Manager (للأسف ممكن)
+
+---
+
+## Indicators
+- أي عملية تفتح Handle على LSASS
+- rundll32 يشغّل comsvcs.dll
+- ملفات dump في C:\Windows\Temp
+- procdump.exe يعمل على LSASS
+
+---
+
+## Detection
+- Event ID 10
+- Event ID 4656
+- EDR memory protection
+- منع MiniDump من LSASS
+
+---
+
+## Related Threats
+- Cobalt Strike
+- Mimikatz
+- Impacket
+
+---
+
+## Summary
+T1003.001 = تفريغ ذاكرة LSASS لسرقة كلمات السر.
