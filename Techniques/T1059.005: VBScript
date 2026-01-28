@@ -1,0 +1,38 @@
+# T1059.005 – VBScript
+
+## Overview
+VBScript يُستخدم عبر WScript/cscript أو داخل Office Macros لتنفيذ أوامر خبيثة.
+
+---
+
+## Why Attackers Use It
+- تشغيل سكربتات داخل Office
+- تنفيذ أوامر عبر WScript
+- HTML smuggling
+- تشغيل DLLs
+
+---
+
+## Common Behaviors
+- Office → WScript → PowerShell
+- VBS → rundll32
+- سكربتات مشفّرة
+
+---
+
+## Detection
+- Macro blocking
+- Monitoring WScript/cscript
+- AMSI
+
+---
+
+## Related Threats
+- Emotet
+- SocGholish
+
+---
+
+## Summary
+VBScript = سكربت قديم… لكن ما زال فعال.
+
