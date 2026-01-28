@@ -1,0 +1,40 @@
+# T1059.003 – Windows Command Shell (CMD)
+
+## Overview
+CMD هو مفسّر الأوامر الأساسي في Windows ويُستخدم لتشغيل PowerShell، certutil، curl، rundll32.
+
+---
+
+## Why Attackers Use It
+- تشغيل PowerShell
+- تشغيل أدوات LOLBins
+- تنفيذ أوامر بسيطة
+- تشغيل payloads
+
+---
+
+## Common Behaviors
+- cmd → powershell
+- cmd → certutil
+- cmd → rundll32
+- cmd → curl/wget
+
+---
+
+## Detection
+- Parent-child monitoring
+- certutil misuse detection
+- curl/wget monitoring
+
+---
+
+## Related Threats
+- Emotet
+- Qbot
+- IcedID
+
+---
+
+## Summary
+CMD = البوابة الأساسية لباقي السكربتات.
+
