@@ -1,0 +1,44 @@
+# T1059.001 – PowerShell
+
+## Overview
+PowerShell أداة قوية يستخدمها المهاجمون لتنفيذ أوامر، تنزيل payloads، وتشغيل سكربتات من الذاكرة.
+
+---
+
+## Why Attackers Use It
+- تنزيل ملفات
+- تشغيل DLLs
+- تنفيذ سكربتات مشفّرة
+- bypass للـ AV
+- تشغيل كود من الذاكرة
+
+---
+
+## Common Behaviors
+- powershell -enc
+- iwr/curl download cradle
+- Office → PowerShell
+- PowerShell → rundll32
+
+---
+
+## Detection
+- Event ID 4104
+- AMSI
+- Network monitoring
+- Parent-child process analysis
+
+---
+
+## Related Threats
+- Qbot
+- IcedID
+- BazarLoader
+- SocGholish
+- Cobalt Strike
+
+---
+
+## Summary
+PowerShell = السكين السويسري للمهاجمين.
+
