@@ -1,0 +1,49 @@
+# T1558 – Steal or Forge Kerberos Tickets
+
+## Overview
+Kerberos هو نظام التوثيق في Active Directory.  
+المهاجمون يستهدفونه لسرقة أو تزوير التذاكر للتحرك داخل الشبكة بدون كلمة سر.
+
+---
+
+## Why Attackers Use It
+- Kerberoasting
+- Pass-the-Ticket
+- Golden Ticket
+- Silver Ticket
+- الوصول لحسابات الخدمة
+
+---
+
+## Common Tools
+- Rubeus
+- Mimikatz
+- Impacket (GetUserSPNs.py)
+
+---
+
+## Indicators
+- طلبات Kerberos غير طبيعية
+- تذاكر طويلة العمر
+- تذاكر بدون PAC
+- محاولات crack على service accounts
+
+---
+
+## Detection
+- Event ID 4769
+- Event ID 4624 (Type 3)
+- مراقبة TGT/TGS anomalies
+- مراقبة service accounts
+
+---
+
+## Related Threats
+- Cobalt Strike
+- Impacket
+- Ransomware operators
+
+---
+
+## Summary
+T1558 = سرقة أو تزوير تذاكر Kerberos للتحرك داخل الشبكة.
