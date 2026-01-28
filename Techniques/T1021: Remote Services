@@ -1,0 +1,42 @@
+# T1021 – Remote Services
+
+## Overview
+المهاجمون يستخدمون خدمات Windows عن بُعد للتحرك داخل الشبكة بعد الحصول على credentials.  
+تشمل SMB، RDP، WMI، WinRM، SSH.
+
+---
+
+## Why Attackers Use It
+- الوصول لأجهزة أخرى
+- نشر payloads
+- تنفيذ أوامر عن بُعد
+- التحضير لنشر ransomware
+
+---
+
+## Common Behaviors
+- SMB connections بين أجهزة غير معتادة
+- RDP login من جهاز غير معروف
+- WMI remote execution
+- WinRM commands
+
+---
+
+## Detection
+- Event ID 4624 (Type 3)
+- Event ID 4625
+- RDP logs
+- SMB traffic monitoring
+
+---
+
+## Related Threats
+- Qbot
+- IcedID
+- Cobalt Strike
+- Impacket
+
+---
+
+## Summary
+T1021 = الأساس لكل Lateral Movement داخل الشبكة.
