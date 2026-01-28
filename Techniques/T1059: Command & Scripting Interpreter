@@ -1,0 +1,45 @@
+# T1059 – Command & Scripting Interpreter
+
+## Overview
+المهاجمون يستخدمون مفسّرات الأوامر واللغات النصية لتنفيذ أوامر بعد الوصول الأولي.  
+تشمل PowerShell، CMD، VBScript، JavaScript، Python، Bash.
+
+---
+
+## Why Attackers Use It
+- تنفيذ أوامر مباشرة
+- تنزيل ملفات
+- تشغيل سكربتات
+- تشغيل DLLs
+- التخفّي باستخدام أدوات النظام (LOLBins)
+
+---
+
+## Common Behaviors
+- PowerShell encoded commands
+- CMD → PowerShell chain
+- WScript.exe يشغّل JS/VBS
+- rundll32 يشغّل DLLs
+
+---
+
+## Detection
+- Script Block Logging (4104)
+- Monitoring cmd.exe & powershell.exe
+- AMSI
+- WScript/cscript monitoring
+
+---
+
+## Related Threats
+- Qbot
+- IcedID
+- Emotet
+- SocGholish
+- Cobalt Strike
+
+---
+
+## Summary
+T1059 = لغة التنفيذ الأساسية للهجمات الحديثة.
+
