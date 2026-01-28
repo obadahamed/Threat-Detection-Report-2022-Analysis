@@ -1,0 +1,40 @@
+# T1021.002 – Remote Desktop Protocol (RDP)
+
+## Overview
+RDP يسمح للمهاجم بالتحكم الكامل بالجهاز بعد سرقة credentials.
+
+---
+
+## Why Attackers Use It
+- التحكم الكامل بالجهاز
+- تنفيذ أوامر مباشرة
+- نقل ملفات
+- تثبيت أدوات إضافية
+
+---
+
+## Common Behaviors
+- mstsc /v:IP
+- تسجيل دخول من جهاز غير معتاد
+- RDP خارج ساعات العمل
+- brute-force على RDP
+
+---
+
+## Detection
+- Event ID 4624 (Type 10)
+- Event ID 4778
+- RDP session monitoring
+- Impossible travel detection
+
+---
+
+## Related Threats
+- Ransomware gangs
+- RATs (NetSupport, AnyDesk)
+- Cobalt Strike operators
+
+---
+
+## Summary
+T1021.002 = دخول المهاجم لجهاز آخر عبر RDP.
