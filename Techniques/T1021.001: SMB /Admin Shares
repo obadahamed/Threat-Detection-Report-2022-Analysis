@@ -1,0 +1,40 @@
+# T1021.001 – SMB / Windows Admin Shares
+
+## Overview
+SMB يُستخدم للوصول إلى C$, ADMIN$, IPC$ بهدف نسخ وتشغيل ملفات على أجهزة أخرى.
+
+---
+
+## Why Attackers Use It
+- نشر ransomware
+- نسخ payloads
+- تشغيل PsExec
+- تنفيذ أوامر عن بُعد
+
+---
+
+## Common Behaviors
+- copy payload.exe \\host\C$
+- الوصول لـ ADMIN$
+- إنشاء ملفات EXE على أجهزة أخرى
+- SMB traffic غير معتاد
+
+---
+
+## Detection
+- Event ID 5140 (Share Access)
+- File creation alerts
+- SMB monitoring
+- Lateral movement detection rules
+
+---
+
+## Related Threats
+- Impacket
+- Ransomware operators
+- Qbot
+
+---
+
+## Summary
+T1021.001 = التحرك عبر SMB للوصول لأجهزة أخرى.
