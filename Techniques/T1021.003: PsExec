@@ -1,0 +1,41 @@
+# T1021.003 – PsExec
+
+## Overview
+PsExec أداة شرعية من Microsoft تُستخدم لتنفيذ أوامر عن بُعد عبر SMB.  
+المهاجمون يستخدمونها لنشر ransomware أو تشغيل payloads.
+
+---
+
+## Why Attackers Use It
+- تنفيذ أوامر عن بُعد
+- نشر ملفات عبر SMB
+- إنشاء خدمات جديدة
+- تشغيل payloads على أجهزة أخرى
+
+---
+
+## Common Behaviors
+- psexec \\host -u admin -p pass -c payload.exe
+- Event ID 7045 (Service Installed)
+- SMB traffic
+- تشغيل EXE من C$
+
+---
+
+## Detection
+- مراقبة الخدمات الجديدة
+- Event ID 7045
+- SMB monitoring
+- PsExec command-line patterns
+
+---
+
+## Related Threats
+- Impacket (psexec.py)
+- Ransomware operators
+- Cobalt Strike
+
+---
+
+## Summary
+T1021.003 = تنفيذ أوامر عن بُعد عبر PsExec.
