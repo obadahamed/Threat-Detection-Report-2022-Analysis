@@ -1,0 +1,44 @@
+# T1566 – Phishing
+
+## Overview
+Phishing هو أكثر أسلوب دخول مستخدم في الهجمات الحديثة.  
+يعتمد على خداع المستخدم لفتح ملف أو الضغط على رابط يؤدي إلى تنفيذ كود خبيث.
+
+---
+
+## Why Attackers Use It
+- تجاوز الحماية التقنية عبر استهداف المستخدم
+- إدخال Loaders مثل Qbot وIcedID
+- نشر ransomware لاحقًا
+- سهولة التنفيذ وانخفاض التكلفة
+
+---
+
+## Common Behaviors
+- رسائل بريد من نطاقات جديدة
+- ZIP يحتوي LNK أو JS
+- Office يطلب Enable Macros
+- HTML smuggling
+- Fake browser updates
+
+---
+
+## Detection
+- Email filtering
+- URL sandboxing
+- Attachment scanning
+- User behavior analytics
+
+---
+
+## Related Threats
+- Qbot
+- IcedID
+- Emotet
+- SocGholish
+- BazarLoader
+
+---
+
+## Summary
+T1566 = دخول المهاجم عبر المستخدم نفسه.
