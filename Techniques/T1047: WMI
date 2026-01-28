@@ -1,0 +1,40 @@
+# T1047 – Windows Management Instrumentation (WMI)
+
+## Overview
+WMI يُستخدم لجمع معلومات أو تنفيذ أوامر عن بُعد بدون فتح جلسة RDP أو SMB مباشرة.
+
+---
+
+## Why Attackers Use It
+- تنفيذ أوامر بصمت
+- جمع معلومات النظام
+- التحرك داخل الشبكة
+- تشغيل payloads بدون ملفات
+
+---
+
+## Common Behaviors
+- wmiexec.py (Impacket)
+- WmiPrvSE.exe يشغّل أوامر
+- DCOM connections
+- PowerShell + WMI
+
+---
+
+## Detection
+- WMI logging
+- Event ID 4688 من WmiPrvSE.exe
+- DCOM monitoring
+- Parent-child analysis
+
+---
+
+## Related Threats
+- Impacket
+- Cobalt Strike
+- APT groups
+
+---
+
+## Summary
+T1047 = تنفيذ أوامر عن بُعد باستخدام WMI.
