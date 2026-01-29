@@ -1,0 +1,45 @@
+# T1140 – Deobfuscate/Decode Files or Information
+
+## Overview
+المهاجمون غالبًا ما يرسلون كود مشفّر أو مضغوط أو مخفي داخل Base64 أو JavaScript أو HTML.  
+بعد الوصول للجهاز، يقومون بفك التشفير لتشغيل الـ payload الحقيقي.
+
+---
+
+## Why Attackers Use It
+- إخفاء الكود الخبيث عن الـ AV/EDR
+- تجاوز الفحص السطحي للملفات
+- تقليل الـ detection عبر high entropy payloads
+- تحميل payloads إضافية بعد فك التشفير
+
+---
+
+## Common Behaviors
+- PowerShell -enc
+- Base64 strings طويلة
+- JavaScript يحتوي atob()
+- HTML smuggling
+- DLLs ذات high entropy
+
+---
+
+## Detection
+- AMSI
+- Script Block Logging
+- YARA rules للـ Base64 patterns
+- Entropy analysis
+- Monitoring PowerShell encoded commands
+
+---
+
+## Related Threats
+- Qbot
+- IcedID
+- SocGholish
+- Emotet
+- BazarLoader
+
+---
+
+## Summary
+T1140 = فك تشفير أو فك ضغط الكود الخبيث بعد الوصول للجهاز.
