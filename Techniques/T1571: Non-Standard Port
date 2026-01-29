@@ -1,0 +1,39 @@
+# T1571 – Non-Standard Port
+
+## Overview
+المهاجمون يستخدمون منافذ غير معتادة (مثل 8080, 8443, 53, 4433) للتواصل مع C2 أو لتسريب البيانات، بهدف تجاوز الفلاتر التقليدية.
+
+---
+
+## Why Attackers Use It
+- تجاوز الفلاتر اللي تسمح فقط بـ 80/443
+- إخفاء C2 داخل حركة غير مراقبة
+- استخدام بروتوكولات عادية على منافذ غريبة
+
+---
+
+## Common Behaviors
+- HTTPS على port 8443
+- DNS tunneling على port 53
+- SSH على port 443
+- beaconing عبر منافذ غير معتادة
+
+---
+
+## Detection
+- مراقبة حركة الشبكة على منافذ غير قياسية
+- تحليل TLS fingerprints
+- كشف anomalous traffic patterns
+
+---
+
+## Related Threats
+- Sliver C2
+- Cobalt Strike
+- APTs
+- RATs
+
+---
+
+## Summary
+T1571 = استخدام منافذ غير قياسية للتخفي أو تجاوز الحماية.
