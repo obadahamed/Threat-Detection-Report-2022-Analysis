@@ -1,0 +1,56 @@
+# T1218 – Signed Binary Proxy Execution (LOLBins)
+
+## Overview
+Windows يحتوي أدوات شرعية موقّعة من Microsoft.  
+المهاجمون يستغلونها لتشغيل كود خبيث بدون إثارة الشبهات.  
+هذه الأدوات تُعرف باسم LOLBins (Living Off The Land Binaries).
+
+---
+
+## Why Attackers Use It
+- تجاوز الـ AV/EDR لأن الأدوات signed و trusted
+- موجودة في كل جهاز Windows
+- تشغيل DLLs و HTA و JS بدون تحميل أدوات إضافية
+- تنفيذ أوامر بصمت
+
+---
+
+## Common LOLBins
+- rundll32.exe
+- regsvr32.exe
+- mshta.exe
+- certutil.exe
+- wscript.exe / cscript.exe
+- powershell.exe
+
+---
+
+## Common Behaviors
+- rundll32 يشغّل DLL غريب
+- mshta يشغّل HTA من الإنترنت
+- certutil ينزّل payloads
+- regsvr32 يشغّل DLL من Temp
+- wscript يشغّل JS خارج المتصفح
+
+---
+
+## Detection
+- Parent-child process analysis
+- Command-line monitoring
+- AMSI
+- AppLocker / WDAC
+- Blocking LOLBins misuse
+
+---
+
+## Related Threats
+- Qbot
+- IcedID
+- SocGholish
+- Emotet
+- Cobalt Strike
+
+---
+
+## Summary
+T1218 = استخدام أدوات Windows الشرعية لتشغيل كود خبيث.
