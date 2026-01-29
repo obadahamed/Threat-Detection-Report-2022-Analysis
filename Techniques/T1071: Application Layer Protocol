@@ -1,0 +1,41 @@
+# T1071 – Application Layer Protocol
+
+## Overview
+المهاجمون يستخدمون بروتوكولات الطبقة التطبيقية (مثل HTTP, HTTPS, DNS, SMTP) للتواصل مع C2 servers.  
+يساعدهم ذلك في التخفي داخل حركة الشبكة الشرعية.
+
+---
+
+## Why Attackers Use It
+- إخفاء C2 داخل بروتوكولات عادية
+- تجاوز الفلاتر التقليدية
+- استخدام بروتوكولات موجودة في كل بيئة
+
+---
+
+## Common Behaviors
+- C2 عبر HTTPS
+- DNS tunneling
+- SMTP exfiltration
+- WebSocket C2
+
+---
+
+## Detection
+- تحليل حركة الشبكة
+- مراقبة حجم البيانات في البروتوكولات
+- كشف anomalous headers
+- Deep Packet Inspection (DPI)
+
+---
+
+## Related Threats
+- Cobalt Strike
+- Sliver C2
+- APTs
+- RATs
+
+---
+
+## Summary
+T1071 = استخدام بروتوكولات الطبقة التطبيقية للتواصل مع C2 أو تسريب البيانات.
